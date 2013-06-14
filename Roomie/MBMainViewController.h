@@ -11,5 +11,6 @@
 @interface MBMainViewController : UIViewController <MBFlipsideViewControllerDelegate, UIPopoverControllerDelegate>
 
 @property (strong, nonatomic) UIPopoverController *flipsidePopoverController;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
