@@ -1,5 +1,5 @@
 //
-//  MBRoomAPIService.h
+//  MBRoomRepository.h
 //  Roomie
 //
 //  Created by Matthew Holden on 6/14/13.
@@ -7,12 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MBRoomCollectionViewDataSource.h"
 #import "MBRoomDaySchedule.h"
 
-@interface MBRoomAPIService : NSObject
-@property (nonatomic) MBRoomCollectionViewDataSource *collectionViewDataSource;
+typedef NS_ENUM(NSUInteger, MBRoomRepositoryType)
+{
+    MBMockRoomRepository,
+    MBAPIRoomRepository
+};
 
+@protocol MBRoomRepository <NSObject>
 -(void)loadScheduleForDay:(NSDate*)date
                      room:(MBRoom*)room
                      done:(void(^)(NSError* err, MBRoomDaySchedule* schedule))callback;

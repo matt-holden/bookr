@@ -8,7 +8,7 @@
 
 #import "MBFlipsideViewController.h"
 
-@interface MBMainViewController : UIViewController <MBFlipsideViewControllerDelegate, UIPopoverControllerDelegate>
+@interface MBMainViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource,MBFlipsideViewControllerDelegate, UIPopoverControllerDelegate>
 
 @property (strong, nonatomic) UIPopoverController *flipsidePopoverController;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;

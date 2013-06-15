@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MSEvent : NSManagedObject
+@interface MSEvent : NSObject
 
 @property (nonatomic, strong) NSNumber *remoteID;
 @property (nonatomic, strong) NSDate *start;
+@property (nonatomic, strong) NSDate *end;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *location;
 @property (nonatomic, strong) NSNumber *timeToBeDecided;

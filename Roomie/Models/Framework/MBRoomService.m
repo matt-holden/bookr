@@ -6,15 +6,15 @@
 //  Copyright (c) 2013 MINDBODY. All rights reserved.
 //
 
-#import "MBRoomAPIService.h"
+#import "MBRoomService.h"
 #import "MBRoomRepository.h"
 #import "MBRoomMockRepository.h"
 
 
-@interface MBRoomAPIService()
+@interface MBRoomService()
 @property (nonatomic) id<MBRoomRepository> roomRepository;
 @end
-@implementation MBRoomAPIService
+@implementation MBRoomService
 
 -(MBRoomCollectionViewDataSource*)collectionViewDataSource
 {

@@ -25,14 +25,15 @@
 		FD2361D2176BB4FE002CABE7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2361AA176BB4FE002CABE7 /* Foundation.framework */; };
 		FD2361DA176BB4FE002CABE7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD2361D8176BB4FE002CABE7 /* InfoPlist.strings */; };
 		FD2361DD176BB4FE002CABE7 /* RoomieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2361DC176BB4FE002CABE7 /* RoomieTests.m */; };
-		FD6C64C7176BB8CF00F68E86 /* MBRoomAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6C64C6176BB8CF00F68E86 /* MBRoomAPIService.m */; };
 		FD6C64CB176BBA9F00F68E86 /* MBRoomCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6C64CA176BBA9F00F68E86 /* MBRoomCollectionViewDataSource.m */; };
 		FD6C64CE176BBCB000F68E86 /* MBStaff.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6C64CD176BBCB000F68E86 /* MBStaff.m */; };
 		FD6C64D1176BBCD400F68E86 /* MBRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6C64D0176BBCD400F68E86 /* MBRoom.m */; };
 		FD6C64D4176BBCED00F68E86 /* MBRoomBooking.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6C64D3176BBCED00F68E86 /* MBRoomBooking.m */; };
 		FD6C64D8176BBE5300F68E86 /* MBRoomDaySchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6C64D7176BBE5200F68E86 /* MBRoomDaySchedule.m */; };
-		FD6C64DB176BBEF500F68E86 /* MBRoomMockRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6C64DA176BBEF500F68E86 /* MBRoomMockRepository.m */; };
 		FD6C64E1176BC60B00F68E86 /* NSDate+DateBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6C64E0176BC60B00F68E86 /* NSDate+DateBrain.m */; };
+		FDA5E326176C20DF0075802B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDA5E325176C20DF0075802B /* QuartzCore.framework */; };
+		FDA5E32D176C21E50075802B /* MBRoomMockRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA5E329176C21E50075802B /* MBRoomMockRepository.m */; };
+		FDA5E32E176C21E50075802B /* MBRoomService.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA5E32C176C21E50075802B /* MBRoomService.m */; };
 		FDD9ACE0176BCF7B0068CAA3 /* MSCurrentTimeGridline.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD9ACCD176BCF7B0068CAA3 /* MSCurrentTimeGridline.m */; };
 		FDD9ACE1176BCF7B0068CAA3 /* MSCurrentTimeIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD9ACCF176BCF7B0068CAA3 /* MSCurrentTimeIndicator.m */; };
 		FDD9ACE2176BCF7B0068CAA3 /* MSCurrentTimeIndicator.png in Resources */ = {isa = PBXBuildFile; fileRef = FDD9ACD0176BCF7B0068CAA3 /* MSCurrentTimeIndicator.png */; };
@@ -83,8 +84,6 @@
 		FD2361D9176BB4FE002CABE7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FD2361DB176BB4FE002CABE7 /* RoomieTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoomieTests.h; sourceTree = "<group>"; };
 		FD2361DC176BB4FE002CABE7 /* RoomieTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoomieTests.m; sourceTree = "<group>"; };
-		FD6C64C5176BB8CF00F68E86 /* MBRoomAPIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBRoomAPIService.h; sourceTree = "<group>"; };
-		FD6C64C6176BB8CF00F68E86 /* MBRoomAPIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBRoomAPIService.m; sourceTree = "<group>"; };
 		FD6C64C9176BBA9F00F68E86 /* MBRoomCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBRoomCollectionViewDataSource.h; sourceTree = "<group>"; };
 		FD6C64CA176BBA9F00F68E86 /* MBRoomCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBRoomCollectionViewDataSource.m; sourceTree = "<group>"; };
 		FD6C64CC176BBCB000F68E86 /* MBStaff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBStaff.h; sourceTree = "<group>"; };
@@ -93,14 +92,17 @@
 		FD6C64D0176BBCD400F68E86 /* MBRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBRoom.m; sourceTree = "<group>"; };
 		FD6C64D2176BBCED00F68E86 /* MBRoomBooking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBRoomBooking.h; sourceTree = "<group>"; };
 		FD6C64D3176BBCED00F68E86 /* MBRoomBooking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBRoomBooking.m; sourceTree = "<group>"; };
-		FD6C64D5176BBDF500F68E86 /* MBRoomRepository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBRoomRepository.h; sourceTree = "<group>"; };
 		FD6C64D6176BBE5200F68E86 /* MBRoomDaySchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBRoomDaySchedule.h; sourceTree = "<group>"; };
 		FD6C64D7176BBE5200F68E86 /* MBRoomDaySchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBRoomDaySchedule.m; sourceTree = "<group>"; };
-		FD6C64D9176BBEF500F68E86 /* MBRoomMockRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBRoomMockRepository.h; sourceTree = "<group>"; };
-		FD6C64DA176BBEF500F68E86 /* MBRoomMockRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBRoomMockRepository.m; sourceTree = "<group>"; };
 		FD6C64DC176BC03D00F68E86 /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		FD6C64DF176BC60A00F68E86 /* NSDate+DateBrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DateBrain.h"; sourceTree = "<group>"; };
 		FD6C64E0176BC60B00F68E86 /* NSDate+DateBrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DateBrain.m"; sourceTree = "<group>"; };
+		FDA5E325176C20DF0075802B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FDA5E328176C21E50075802B /* MBRoomMockRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBRoomMockRepository.h; sourceTree = "<group>"; };
+		FDA5E329176C21E50075802B /* MBRoomMockRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBRoomMockRepository.m; sourceTree = "<group>"; };
+		FDA5E32A176C21E50075802B /* MBRoomRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBRoomRepository.h; sourceTree = "<group>"; };
+		FDA5E32B176C21E50075802B /* MBRoomService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBRoomService.h; sourceTree = "<group>"; };
+		FDA5E32C176C21E50075802B /* MBRoomService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBRoomService.m; sourceTree = "<group>"; };
 		FDD9ACCC176BCF7B0068CAA3 /* MSCurrentTimeGridline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCurrentTimeGridline.h; sourceTree = "<group>"; };
 		FDD9ACCD176BCF7B0068CAA3 /* MSCurrentTimeGridline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCurrentTimeGridline.m; sourceTree = "<group>"; };
 		FDD9ACCE176BCF7B0068CAA3 /* MSCurrentTimeIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCurrentTimeIndicator.h; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDA5E326176C20DF0075802B /* QuartzCore.framework in Frameworks */,
 				FD2361A9176BB4FE002CABE7 /* UIKit.framework in Frameworks */,
 				FD2361AB176BB4FE002CABE7 /* Foundation.framework in Frameworks */,
 				FD2361AD176BB4FE002CABE7 /* CoreGraphics.framework in Frameworks */,
@@ -151,6 +154,7 @@
 		FD23619C176BB4FD002CABE7 = {
 			isa = PBXGroup;
 			children = (
+				FDA5E325176C20DF0075802B /* QuartzCore.framework */,
 				FD2361AE176BB4FE002CABE7 /* Roomie */,
 				FD2361D5176BB4FE002CABE7 /* RoomieTests */,
 				FD2361A7176BB4FE002CABE7 /* Frameworks */,
@@ -186,7 +190,6 @@
 				FDD9ACCB176BCF7B0068CAA3 /* MS */,
 				FD6C64DE176BC5F300F68E86 /* Util */,
 				FD6C64C8176BBA8900F68E86 /* Models */,
-				FD6C64C4176BB8A300F68E86 /* Service */,
 				FD2361B7176BB4FE002CABE7 /* MBAppDelegate.h */,
 				FD2361B8176BB4FE002CABE7 /* MBAppDelegate.m */,
 				FD2361C0176BB4FE002CABE7 /* MainStoryboard.storyboard */,
@@ -233,22 +236,10 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		FD6C64C4176BB8A300F68E86 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				FD6C64C5176BB8CF00F68E86 /* MBRoomAPIService.h */,
-				FD6C64C6176BB8CF00F68E86 /* MBRoomAPIService.m */,
-				FD6C64D5176BBDF500F68E86 /* MBRoomRepository.h */,
-				FD6C64D9176BBEF500F68E86 /* MBRoomMockRepository.h */,
-				FD6C64DA176BBEF500F68E86 /* MBRoomMockRepository.m */,
-			);
-			name = Service;
-			path = Roomie/Service;
-			sourceTree = SOURCE_ROOT;
-		};
 		FD6C64C8176BBA8900F68E86 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FDA5E327176C21E50075802B /* Framework */,
 				FD6C64C9176BBA9F00F68E86 /* MBRoomCollectionViewDataSource.h */,
 				FD6C64CA176BBA9F00F68E86 /* MBRoomCollectionViewDataSource.m */,
 				FD6C64CC176BBCB000F68E86 /* MBStaff.h */,
@@ -270,6 +261,18 @@
 				FD6C64E0176BC60B00F68E86 /* NSDate+DateBrain.m */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		FDA5E327176C21E50075802B /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				FDA5E328176C21E50075802B /* MBRoomMockRepository.h */,
+				FDA5E329176C21E50075802B /* MBRoomMockRepository.m */,
+				FDA5E32A176C21E50075802B /* MBRoomRepository.h */,
+				FDA5E32B176C21E50075802B /* MBRoomService.h */,
+				FDA5E32C176C21E50075802B /* MBRoomService.m */,
+			);
+			path = Framework;
 			sourceTree = "<group>";
 		};
 		FDD9ACCB176BCF7B0068CAA3 /* MS */ = {
@@ -446,13 +449,11 @@
 				FD2361B9176BB4FE002CABE7 /* MBAppDelegate.m in Sources */,
 				FD2361C5176BB4FE002CABE7 /* MBMainViewController.m in Sources */,
 				FD2361C8176BB4FE002CABE7 /* MBFlipsideViewController.m in Sources */,
-				FD6C64C7176BB8CF00F68E86 /* MBRoomAPIService.m in Sources */,
 				FD6C64CB176BBA9F00F68E86 /* MBRoomCollectionViewDataSource.m in Sources */,
 				FD6C64CE176BBCB000F68E86 /* MBStaff.m in Sources */,
 				FD6C64D1176BBCD400F68E86 /* MBRoom.m in Sources */,
 				FD6C64D4176BBCED00F68E86 /* MBRoomBooking.m in Sources */,
 				FD6C64D8176BBE5300F68E86 /* MBRoomDaySchedule.m in Sources */,
-				FD6C64DB176BBEF500F68E86 /* MBRoomMockRepository.m in Sources */,
 				FD6C64E1176BC60B00F68E86 /* NSDate+DateBrain.m in Sources */,
 				FDD9ACE0176BCF7B0068CAA3 /* MSCurrentTimeGridline.m in Sources */,
 				FDD9ACE1176BCF7B0068CAA3 /* MSCurrentTimeIndicator.m in Sources */,
@@ -463,6 +464,8 @@
 				FDD9ACE8176BCF7B0068CAA3 /* MSGridline.m in Sources */,
 				FDD9ACE9176BCF7B0068CAA3 /* MSTimeRowHeader.m in Sources */,
 				FDD9ACEA176BCF7B0068CAA3 /* MSTimeRowHeaderBackground.m in Sources */,
+				FDA5E32D176C21E50075802B /* MBRoomMockRepository.m in Sources */,
+				FDA5E32E176C21E50075802B /* MBRoomService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
