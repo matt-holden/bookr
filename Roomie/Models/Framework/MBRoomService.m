@@ -16,14 +16,6 @@
 @end
 @implementation MBRoomService
 
--(MBRoomCollectionViewDataSource*)collectionViewDataSource
-{
-    if (!_collectionViewDataSource) {
-        _collectionViewDataSource = [[MBRoomCollectionViewDataSource alloc] init];
-    }
-    return _collectionViewDataSource;
-}
-
 -(id)init
 {
     self = [super init];

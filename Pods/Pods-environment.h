@@ -18,11 +18,11 @@
 #define COCOAPODS_VERSION_MINOR_CupertinoYankee 1
 #define COCOAPODS_VERSION_PATCH_CupertinoYankee 1
 
-// MSCollectionViewCalendarLayout
-#define COCOAPODS_POD_AVAILABLE_MSCollectionViewCalendarLayout
-#define COCOAPODS_VERSION_MAJOR_MSCollectionViewCalendarLayout 0
-#define COCOAPODS_VERSION_MINOR_MSCollectionViewCalendarLayout 0
-#define COCOAPODS_VERSION_PATCH_MSCollectionViewCalendarLayout 2
+// MACalendarUI
+#define COCOAPODS_POD_AVAILABLE_MACalendarUI
+#define COCOAPODS_VERSION_MAJOR_MACalendarUI 1
+#define COCOAPODS_VERSION_MINOR_MACalendarUI 0
+#define COCOAPODS_VERSION_PATCH_MACalendarUI 3
 
 // UIColor-Utilities
 #define COCOAPODS_POD_AVAILABLE_UIColor_Utilities

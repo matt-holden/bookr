@@ -8,42 +8,45 @@
 
 #import "NSDate+DateBrain.h"
 
+#define CURRENT_CALENDAR [NSCalendar currentCalendar]
 @implementation NSDate (DateBrain)
 
 -(NSDate*)dateWithHours:(NSInteger)hours
                 minutes:(NSInteger)minutes
                 seconds:(NSInteger)seconds
 {
-    NSDateComponents *comp = [self components];
+    NSDateComponents *comp = [self dateComponents];
     [comp setHour:hours];
     [comp setMinute:minutes];
     [comp setSecond:seconds];
-    return [comp date];
+    
+    return [CURRENT_CALENDAR dateFromComponents:comp];
 }
 
 -(NSDate*)dateWithHours:(NSInteger)hours
 {
-    NSDateComponents *comp = [self components];
+    NSDateComponents *comp = [self dateComponents];
     [comp setHour:hours];
-    return [comp date];
+    return [CURRENT_CALENDAR dateFromComponents:comp];
 }
 -(NSDate*)dateWithMinutes:(NSInteger)minutes
 {
-    NSDateComponents *comp = [self components];
+    NSDateComponents *comp = [self dateComponents];
     [comp setMinute:minutes];
-    return [comp date];
+    return [CURRENT_CALENDAR dateFromComponents:comp];
 }
 -(NSDate*)dateWithSeconds:(NSInteger)seconds
 {
-    NSDateComponents *comp = [self components];
+    NSDateComponents *comp = [self dateComponents];
     [comp setSecond:seconds];
-    return [comp date];
+    return [CURRENT_CALENDAR dateFromComponents:comp];
 }
--(NSDateComponents*)components
+
+-(NSDateComponents*)dateComponents
 {
     // Use the user's current calendar and time zone
-    NSCalendar *calendar = [NSCalendar currentCalendar];
     NSTimeZone *timeZone = [NSTimeZone systemTimeZone];
+    NSCalendar *calendar = CURRENT_CALENDAR;
     [calendar setTimeZone:timeZone];
     
     // Selectively convert the date components (year, month, day) of the input date

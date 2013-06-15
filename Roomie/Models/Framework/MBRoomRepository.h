@@ -9,12 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "MBRoomDaySchedule.h"
 
-typedef NS_ENUM(NSUInteger, MBRoomRepositoryType)
-{
-    MBMockRoomRepository,
-    MBAPIRoomRepository
-};
-
 @protocol MBRoomRepository <NSObject>
 -(void)loadScheduleForDay:(NSDate*)date
                      room:(MBRoom*)room

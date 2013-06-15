@@ -7,10 +7,13 @@
 //
 
 #import "MBFlipsideViewController.h"
+#import <MACalendarUI/MADayView.h>
 
-@interface MBMainViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource,MBFlipsideViewControllerDelegate, UIPopoverControllerDelegate>
+@interface MBMainViewController : UIViewController <MBFlipsideViewControllerDelegate, UIPopoverControllerDelegate, MADayViewDataSource, MADayViewDelegate, MADayViewDelegate>
+{
+    IBOutlet UINavigationItem *_navItem;
+}
 
 @property (strong, nonatomic) UIPopoverController *flipsidePopoverController;
-@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-
+@property (nonatomic) IBOutlet MADayView *dayView;
 @end

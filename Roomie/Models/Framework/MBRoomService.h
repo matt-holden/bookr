@@ -7,11 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MBRoomCollectionViewDataSource.h"
 #import "MBRoomDaySchedule.h"
 
 @interface MBRoomService : NSObject
-@property (nonatomic) MBRoomCollectionViewDataSource *collectionViewDataSource;
 
 -(void)loadScheduleForDay:(NSDate*)date
                      room:(MBRoom*)room

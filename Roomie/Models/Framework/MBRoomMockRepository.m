@@ -35,6 +35,7 @@
         [bookings addObject:booking];
     }
     
+    
     [mockDay setBookings:[NSArray arrayWithArray:bookings]];
     [mockDay setRoom:theRoom];
     
