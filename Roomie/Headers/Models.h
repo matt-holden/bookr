@@ -11,4 +11,5 @@
 #import "MBRoomBooking.h"
 #import "MBRoomDaySchedule.h"
 #import "MBRoomDaySchedule+MAEvents.h"
+#import "MBRoomDaySchedule+Engine.h"
 #import "MBRoomBooking+MAEvent.h"

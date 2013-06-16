@@ -111,9 +111,6 @@
                                 <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="IN USE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="pC4-Ix-hwr">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="103" id="ZWD-th-9Hl"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="69"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -138,26 +135,40 @@
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Now: 9:58 am" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="5m8-dY-aMr">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="JYh-HF-aJb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1647058874" green="0.61460433469999998" blue="0.93333339689999995" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="TdN-cz-RU4" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="6ru-de-FDZ"/>
+                            <constraint firstItem="5m8-dY-aMr" firstAttribute="leading" secondItem="lhp-30-8gl" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="FLX-In-u4Y"/>
                             <constraint firstItem="pC4-Ix-hwr" firstAttribute="top" secondItem="cWQ-FS-LEK" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="FM4-68-KRQ"/>
                             <constraint firstAttribute="trailing" secondItem="pC4-Ix-hwr" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="JSI-wU-keK"/>
-                            <constraint firstItem="qVr-un-9fd" firstAttribute="top" secondItem="pC4-Ix-hwr" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="QaE-zI-KwR"/>
+                            <constraint firstAttribute="bottom" secondItem="TdN-cz-RU4" secondAttribute="bottom" constant="49" id="NC6-QF-KkU"/>
                             <constraint firstAttribute="trailing" secondItem="qVr-un-9fd" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="SJe-RE-tq2"/>
                             <constraint firstItem="qVr-un-9fd" firstAttribute="leading" secondItem="lhp-30-8gl" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="U9O-vl-1Mf"/>
+                            <constraint firstAttribute="bottom" secondItem="5m8-dY-aMr" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="Upn-WM-Rcg"/>
                             <constraint firstItem="cWQ-FS-LEK" firstAttribute="leading" secondItem="lhp-30-8gl" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="c71-Ae-E78"/>
                             <constraint firstItem="TdN-cz-RU4" firstAttribute="leading" secondItem="lhp-30-8gl" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="enX-Wt-0Sf"/>
+                            <constraint firstItem="qVr-un-9fd" firstAttribute="top" secondItem="pC4-Ix-hwr" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="fZY-UA-0WA"/>
                             <constraint firstItem="cWQ-FS-LEK" firstAttribute="top" secondItem="lhp-30-8gl" secondAttribute="top" constant="20" symbolic="YES" type="default" id="g2z-mj-pFz"/>
                             <constraint firstItem="pC4-Ix-hwr" firstAttribute="leading" secondItem="lhp-30-8gl" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="nYg-SX-Gs2"/>
-                            <constraint firstAttribute="bottom" secondItem="TdN-cz-RU4" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="uzr-v7-OzJ"/>
+                            <constraint firstItem="TdN-cz-RU4" firstAttribute="top" secondItem="qVr-un-9fd" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qUk-BA-A5d"/>
+                            <constraint firstAttribute="trailing" secondItem="5m8-dY-aMr" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="uC6-er-zt1"/>
                             <constraint firstAttribute="trailing" secondItem="cWQ-FS-LEK" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="zMe-IA-Nqm"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <connections>
                         <outlet property="nextAvailabilityLabel" destination="TdN-cz-RU4" id="ZbL-xp-lwf"/>
+                        <outlet property="nowLabel" destination="5m8-dY-aMr" id="EvS-EQ-Bf1"/>
                         <outlet property="roomClientNameLabel" destination="qVr-un-9fd" id="kIh-oX-ax3"/>
                         <outlet property="roomNameLabel" destination="cWQ-FS-LEK" id="2zK-aV-3yO"/>
                         <outlet property="roomStatusLabel" destination="pC4-Ix-hwr" id="Tbt-bA-br2"/>
@@ -168,6 +179,42 @@
             <point key="canvasLocation" x="-36" y="-390"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="MADayView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MADayView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="dataSource"/>
+                <relationship kind="outlet" name="delegate"/>
+            </relationships>
+        </class>
+        <class className="MBFlipsideViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MBFlipsideViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="done:"/>
+            </relationships>
+        </class>
+        <class className="MBMainViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MBMainViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="togglePopover:"/>
+                <relationship kind="outlet" name="_navItem" candidateClass="UINavigationItem"/>
+                <relationship kind="outlet" name="dayView" candidateClass="MADayView"/>
+            </relationships>
+        </class>
+        <class className="MBNowViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MBNowViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="nextAvailabilityLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nowLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="roomClientNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="roomNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="roomStatusLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

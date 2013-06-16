@@ -11,6 +11,8 @@
 		2A2AC1BA176D67D700E449BD /* MBFlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2AC1B7176D67D700E449BD /* MBFlipsideViewController.m */; };
 		2A2AC1BB176D67D700E449BD /* MBMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2AC1B9176D67D700E449BD /* MBMainViewController.m */; };
 		2A2AC1BE176D682500E449BD /* MBNowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2AC1BD176D682500E449BD /* MBNowViewController.m */; };
+		2A2AC1DE176D814C00E449BD /* MBRoomDaySchedule+Engine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2AC1DD176D814C00E449BD /* MBRoomDaySchedule+Engine.m */; };
+		2A2AC1E4176D893B00E449BD /* MBTimeWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2AC1E3176D893B00E449BD /* MBTimeWindow.m */; };
 		FD2361A9176BB4FE002CABE7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2361A8176BB4FE002CABE7 /* UIKit.framework */; };
 		FD2361AB176BB4FE002CABE7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2361AA176BB4FE002CABE7 /* Foundation.framework */; };
 		FD2361AD176BB4FE002CABE7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2361AC176BB4FE002CABE7 /* CoreGraphics.framework */; };
@@ -58,6 +60,10 @@
 		2A2AC1BD176D682500E449BD /* MBNowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBNowViewController.m; sourceTree = "<group>"; };
 		2A2AC1C0176D6B9000E449BD /* Framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Framework.h; sourceTree = "<group>"; };
 		2A2AC1C1176D6BF700E449BD /* Models.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Models.h; sourceTree = "<group>"; };
+		2A2AC1DC176D814C00E449BD /* MBRoomDaySchedule+Engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBRoomDaySchedule+Engine.h"; sourceTree = "<group>"; };
+		2A2AC1DD176D814C00E449BD /* MBRoomDaySchedule+Engine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBRoomDaySchedule+Engine.m"; sourceTree = "<group>"; };
+		2A2AC1E2176D893B00E449BD /* MBTimeWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTimeWindow.h; sourceTree = "<group>"; };
+		2A2AC1E3176D893B00E449BD /* MBTimeWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTimeWindow.m; sourceTree = "<group>"; };
 		A76794F5B26D43FC90B5301A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD2361A5176BB4FE002CABE7 /* Roomie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roomie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD2361A8176BB4FE002CABE7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -249,6 +255,10 @@
 				FD6C64D7176BBE5200F68E86 /* MBRoomDaySchedule.m */,
 				FDA5E330176C31BB0075802B /* MBRoomBooking+MAEvent.h */,
 				FDA5E331176C31BB0075802B /* MBRoomBooking+MAEvent.m */,
+				2A2AC1DC176D814C00E449BD /* MBRoomDaySchedule+Engine.h */,
+				2A2AC1DD176D814C00E449BD /* MBRoomDaySchedule+Engine.m */,
+				2A2AC1E2176D893B00E449BD /* MBTimeWindow.h */,
+				2A2AC1E3176D893B00E449BD /* MBTimeWindow.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -436,6 +446,8 @@
 				2A2AC1BA176D67D700E449BD /* MBFlipsideViewController.m in Sources */,
 				2A2AC1BB176D67D700E449BD /* MBMainViewController.m in Sources */,
 				2A2AC1BE176D682500E449BD /* MBNowViewController.m in Sources */,
+				2A2AC1DE176D814C00E449BD /* MBRoomDaySchedule+Engine.m in Sources */,
+				2A2AC1E4176D893B00E449BD /* MBTimeWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,7 +14,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *roomStatusLabel;
 @property (weak, nonatomic) IBOutlet UILabel *roomClientNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *nextAvailabilityLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nowLabel;
 
-@property (nonatomic) MBRoomDaySchedule *representedSchedule;
+-(void)setRepresentedSchedule:(MBRoomDaySchedule*)representedSchedule;
 
 @end

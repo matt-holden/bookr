@@ -22,7 +22,9 @@
     MBRoom *theRoom = [[MBRoom alloc] init];
     [theRoom setRoomId:@"123"];
     [theRoom setRoomName:@"MONDOPAD!"];
-    [mockDay setDate:[NSDate date]];
+    
+    NSDate *today = [[NSDate date] dateWithHours:0 minutes:0 seconds:0];
+    [mockDay setDate:today];
     
     int startHour = 9;
     int length = 1;
