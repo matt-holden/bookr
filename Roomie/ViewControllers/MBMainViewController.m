@@ -8,9 +8,11 @@
 
 
 #import "MBMainViewController.h"
+#import "MBNowViewController.h"
 #import "MBRoomService.h"
 #import "MBRoomBooking+MAEvent.h"
 #import "MBRoomDaySchedule+MAEvents.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface MBMainViewController ()
 @property (nonatomic) MBRoomService *roomService;
@@ -22,19 +24,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self.nowViewControllerContainerView.layer setShadowColor:[UIColor blackColor].CGColor];
+    [self.nowViewControllerContainerView.layer setShadowOffset:CGSizeMake(0, 3)];
+    [self.nowViewControllerContainerView.layer setShadowOpacity:1];
+    [self.nowViewControllerContainerView.layer setShadowRadius:4];
+    
+    [self.nowViewController parentViewControllerDidStartLoadingSchedule:self];
     [self setRoomService:[[MBRoomService alloc] init]];
     
-    [self.dayView setDataSource:self];
     [self.dayView setDelegate:self];
     [self.dayView setLabelFontSize:24];
     [self.dayView setAutoScrollToFirstEvent:YES];
-    [self.roomService loadScheduleForDay:[NSDate date]
-                                    room:[[MBRoom alloc] init]
-                                    done:^(NSError *err, MBRoomDaySchedule *schedule) {
-                                        [self setRepresentedSchedule:schedule];
-                                        [_navItem setTitle:[schedule.room roomName]];
-                                        [self.dayView reloadData];
-                                    }];
+    [self.dayView reloadData];
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -43,20 +45,29 @@
 }
 
 
-#pragma mark MADayViewDelegate
+#pragma mark MBDayViewDelegate
+- (void)dayView:(MBDayView *)dayView didRequestScheduleForDate:(NSDate*)date
+{
+    [self.roomService loadScheduleForDay:date
+                                    room:[[MBRoom alloc] init]
+                                    done:^(NSError *err, MBRoomDaySchedule *schedule) {
+                                        [self setRepresentedSchedule:schedule];
+                                        [self.dayView setSchedule:schedule
+                                                        forDate:date];
+                                        
+                                        if (self.nowViewController) {
+                                            [self.nowViewController parentViewController:self
+                                                                         didLoadSchedule:schedule];
+                                        }
+                                    }];
+}
+
 - (void)dayView:(MADayView *)dayView eventTapped:(MAEvent *)event
 {
     
 }
 
 #pragma mark MADayViewDataSource
-- (NSArray *)dayView:(MADayView *)dayView eventsForDate:(NSDate *)startDate {
-    NSSet *events = [self.representedSchedule MAEvents];
-    return [events allObjects];
-}
-
-
-
 
 #pragma mark - Flipside View Controller
 
@@ -78,6 +89,13 @@
         UIPopoverController *popoverController = [(UIStoryboardPopoverSegue *)segue popoverController];
         self.flipsidePopoverController = popoverController;
         popoverController.delegate = self;
+    } else if ([[segue identifier] isEqualToString:@"NowEmbedSegue"]) {
+        MBNowViewController *vc = [segue destinationViewController];
+        [self setNowViewController:vc];
+        if (self.representedSchedule) {
+            [self.nowViewController parentViewController:self
+                                         didLoadSchedule:self.representedSchedule];
+        }
     }
 }
 

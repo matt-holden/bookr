@@ -7,6 +7,7 @@
 //
 
 #import "MBRoomDaySchedule+Engine.h"
+#import <CupertinoYankee/NSDate+CupertinoYankee.h>
 
 @implementation MBRoomDaySchedule (Engine)
 
@@ -50,20 +51,38 @@
     NSDate *startTime = [self date];
     NSMutableArray *timeWindows = [[NSMutableArray alloc] initWithCapacity:10];
     for (int i = 0, count = [self.bookings count]; i < count; i++) {
+        MBRoomBooking *thisBooking;
         MBTimeWindow *tw = [[MBTimeWindow alloc] init];
         [tw setStartTime:startTime];
-        [tw setEndTime:[self.bookings[i] startTime]];
+        [tw setEndTime:[thisBooking startTime]];
         if ([tw.endTime timeIntervalSinceDate:tw.startTime] != 0) {
             [timeWindows addObject:tw];
         }
-        startTime = [self.bookings[i] endTime];
+        startTime = [thisBooking endTime];
+    }
+    // Account for time from end of last booking until midnight
+    if ([startTime compare:[self.date endOfDay]] == NSOrderedAscending) {
+        MBTimeWindow *tw = [[MBTimeWindow alloc] init];
+        [tw setStartTime:startTime];
+        [tw setEndTime:[self.date endOfDay]];
+        [timeWindows addObject:tw];
     }
     return [NSArray arrayWithArray:timeWindows];
 }
 
 -(MBTimeWindow*)nextAvailableTimeWindow
 {
-    
+    NSArray *timeWindows = [self availableTimeWindows];
+    NSDate *now = [NSDate date];
+    int index = [timeWindows indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+        MBTimeWindow *tw = (MBTimeWindow*)obj;
+        if ([now compare:[tw startTime]] == NSOrderedAscending) {
+            *stop = YES;
+            return YES;
+        }
+        return NO;
+    }];
+    return index == NSNotFound ? nil : timeWindows[index];
 }
 
 -(BOOL)isInUseNow

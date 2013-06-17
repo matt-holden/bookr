@@ -13,6 +13,7 @@
 		2A2AC1BE176D682500E449BD /* MBNowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2AC1BD176D682500E449BD /* MBNowViewController.m */; };
 		2A2AC1DE176D814C00E449BD /* MBRoomDaySchedule+Engine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2AC1DD176D814C00E449BD /* MBRoomDaySchedule+Engine.m */; };
 		2A2AC1E4176D893B00E449BD /* MBTimeWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2AC1E3176D893B00E449BD /* MBTimeWindow.m */; };
+		2A2AC1E8176E79FE00E449BD /* MBDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2AC1E7176E79FE00E449BD /* MBDayView.m */; };
 		FD2361A9176BB4FE002CABE7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2361A8176BB4FE002CABE7 /* UIKit.framework */; };
 		FD2361AB176BB4FE002CABE7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2361AA176BB4FE002CABE7 /* Foundation.framework */; };
 		FD2361AD176BB4FE002CABE7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2361AC176BB4FE002CABE7 /* CoreGraphics.framework */; };
@@ -64,6 +65,8 @@
 		2A2AC1DD176D814C00E449BD /* MBRoomDaySchedule+Engine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBRoomDaySchedule+Engine.m"; sourceTree = "<group>"; };
 		2A2AC1E2176D893B00E449BD /* MBTimeWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTimeWindow.h; sourceTree = "<group>"; };
 		2A2AC1E3176D893B00E449BD /* MBTimeWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTimeWindow.m; sourceTree = "<group>"; };
+		2A2AC1E6176E79FE00E449BD /* MBDayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBDayView.h; sourceTree = "<group>"; };
+		2A2AC1E7176E79FE00E449BD /* MBDayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBDayView.m; sourceTree = "<group>"; };
 		A76794F5B26D43FC90B5301A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD2361A5176BB4FE002CABE7 /* Roomie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roomie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD2361A8176BB4FE002CABE7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -156,6 +159,15 @@
 			path = Headers;
 			sourceTree = "<group>";
 		};
+		2A2AC1E5176E79E100E449BD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2A2AC1E6176E79FE00E449BD /* MBDayView.h */,
+				2A2AC1E7176E79FE00E449BD /* MBDayView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		FD23619C176BB4FD002CABE7 = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +213,7 @@
 				FD2361C0176BB4FE002CABE7 /* MainStoryboard.storyboard */,
 				FD2361AF176BB4FE002CABE7 /* Supporting Files */,
 				FD6C64DC176BC03D00F68E86 /* Macros.h */,
+				2A2AC1E5176E79E100E449BD /* Views */,
 				2A2AC1B5176D67D700E449BD /* ViewControllers */,
 			);
 			path = Roomie;
@@ -448,6 +461,7 @@
 				2A2AC1BE176D682500E449BD /* MBNowViewController.m in Sources */,
 				2A2AC1DE176D814C00E449BD /* MBRoomDaySchedule+Engine.m in Sources */,
 				2A2AC1E4176D893B00E449BD /* MBTimeWindow.m in Sources */,
+				2A2AC1E8176E79FE00E449BD /* MBDayView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

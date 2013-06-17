@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *nextAvailabilityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *nowLabel;
 
--(void)setRepresentedSchedule:(MBRoomDaySchedule*)representedSchedule;
 
+-(void)parentViewControllerDidStartLoadingSchedule:(UIViewController*)vc;
+-(void)parentViewController:(UIViewController*)vc
+            didLoadSchedule:(MBRoomDaySchedule*)schedule;
 @end

@@ -14,7 +14,7 @@
                         <subviews>
                             <navigationBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="13">
                                 <items>
-                                    <navigationItem title="{Room Name}" id="14">
+                                    <navigationItem title="MINDBODY" id="14">
                                         <barButtonItem key="rightBarButtonItem" title="Info" id="15">
                                             <connections>
                                                 <action selector="togglePopover:" destination="2" id="23"/>
@@ -23,13 +23,13 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EZf-1v-pvl" customClass="MADayView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EZf-1v-pvl" customClass="MBDayView">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                             <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jtx-sr-5Nh">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="0nW-sx-kcj" kind="embed" id="YbN-Fj-EUO"/>
+                                    <segue destination="0nW-sx-kcj" kind="embed" identifier="NowEmbedSegue" id="YbN-Fj-EUO"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -49,8 +49,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="_navItem" destination="14" id="rcW-R7-2En"/>
-                        <outlet property="dayView" destination="EZf-1v-pvl" id="CaT-dz-PnN"/>
+                        <outlet property="dayView" destination="EZf-1v-pvl" id="FTZ-qY-yo6"/>
+                        <outlet property="nowViewControllerContainerView" destination="Jtx-sr-5Nh" id="YBy-fV-YW7"/>
                         <segue destination="5" kind="popover" identifier="showAlternate" popoverAnchorBarButtonItem="15" id="22">
                             <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                         </segue>
@@ -187,6 +187,9 @@
                 <relationship kind="outlet" name="delegate"/>
             </relationships>
         </class>
+        <class className="MBDayView" superclassName="MADayView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MBDayView.h"/>
+        </class>
         <class className="MBFlipsideViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MBFlipsideViewController.h"/>
             <relationships>
@@ -197,8 +200,8 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MBMainViewController.h"/>
             <relationships>
                 <relationship kind="action" name="togglePopover:"/>
-                <relationship kind="outlet" name="_navItem" candidateClass="UINavigationItem"/>
-                <relationship kind="outlet" name="dayView" candidateClass="MADayView"/>
+                <relationship kind="outlet" name="dayView" candidateClass="MBDayView"/>
+                <relationship kind="outlet" name="nowViewControllerContainerView" candidateClass="UIView"/>
             </relationships>
         </class>
         <class className="MBNowViewController" superclassName="UIViewController">

@@ -21,15 +21,19 @@
     MBRoomDaySchedule *mockDay = [[MBRoomDaySchedule alloc] init];
     MBRoom *theRoom = [[MBRoom alloc] init];
     [theRoom setRoomId:@"123"];
-    [theRoom setRoomName:@"MONDOPAD!"];
+    [theRoom setRoomName:@"Hatha (Max 10)"];
     
-    NSDate *today = [[NSDate date] dateWithHours:0 minutes:0 seconds:0];
+    NSDate *today = [date dateWithHours:0 minutes:0 seconds:0];
     [mockDay setDate:today];
     
     int startHour = 9;
     int length = 1;
+    int count = 3;
+    if ([[date earlierDate:[NSDate date]] isEqualToDate:date]) {
+        count = 0;
+    }
     NSMutableArray *bookings = [[NSMutableArray alloc] initWithCapacity:3];
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < count; i++) {
         MBRoomBooking *booking = [[MBRoomBooking alloc] init];
         
         [booking setStartTime:[date dateWithHours:(startHour + 2*i) minutes:0 seconds:0]];
